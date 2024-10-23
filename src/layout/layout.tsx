@@ -18,15 +18,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
     return null;
   }
 
+  const isRootRoute = pathname === "/";
+
   return (
     <div
       className={clsx(
         "background",
-        pathname === "/" ? "background-home" : "background-other"
+        isRootRoute ? "background-home" : "background-other"
       )}
     >
       <div className={clsx("overlay", "overlay--enter")}>
         <Transition
+          key={pathname}
           initial={{ opacity: 0, x: "100vw" }}
           animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
           exit={{ opacity: 0, x: "-100vw", transition: { duration: 1 } }}
