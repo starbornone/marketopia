@@ -1,0 +1,119 @@
+:root {
+  --primary-color: rgba(85, 65, 125, 1);
+  --secondary-color: rgba(45, 45, 68, 1);
+  --highlight-color: rgba(200, 50, 70, 1);
+  --accent-color: rgba(255, 215, 110, 1);
+  --background-color: rgba(200, 225, 255, 1);
+  --neutral-color: rgba(240, 235, 225, 1);
+  --shadow-color: rgba(60, 60, 80, 1);
+  --text-color: rgba(80, 80, 80, 1);
+  --text-muted-color: rgba(150, 150, 150, 1);
+  --padding-large: 2.4rem;
+  --padding-medium: 1.2rem;
+  --padding-small: 0.6rem;
+}
+
+body {
+  color: var(--text-color);
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: var(--padding-small) 0;
+}
+
+p.emphasis {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+ul,
+ol {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  list-style-type: disc;
+  margin: var(--padding-small) 0;
+  list-style-position: inside;
+}
+
+li {
+  margin: var(--padding-small) 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.container {
+  text-align: center;
+  padding: var(--padding-large);
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--neutral-color);
+  border-radius: 2rem;
+  border: 1px solid var(--secondary-color);
+  color: var(--text-color);
+  font-family: "Lexend", sans-serif;
+  font-size: 1rem;
+  margin: var(--padding-small) 0;
+  max-width: 200px;
+  padding: var(--padding-small);
+  width: 100%;
+
+  &:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 5px var(--highlight-color);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--text-muted-color);
+  }
+}
+
+button {
+  background-color: var(--highlight-color);
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.2rem;
+  padding: var(--padding-small) var(--padding-medium);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}

@@ -1,0 +1,38 @@
+.form,
+.model-selection {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.slider {
+  width: 100%;
+  background-color: var(--neutral-color);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  border-radius: 2rem;
+  background: var(--primary-color);
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--highlight-color);
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--highlight-color);
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+}

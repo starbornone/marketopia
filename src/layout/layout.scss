@@ -1,0 +1,32 @@
+.background {
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  transition: background-image 3s ease-in-out;
+  width: 100vw;
+  z-index: 0;
+}
+
+.background-home {
+  background-image: url("../assets/002a.jpg");
+}
+
+.background-other {
+  background-image: url("../assets/003a.jpg");
+}
+
+.overlay {
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: opacity 1s ease-in-out, transform 1s ease-in;
+  width: 100%;
+  z-index: 50;
+
+  &--enter {
+    opacity: 1;
+  }
+}
