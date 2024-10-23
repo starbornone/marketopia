@@ -1,9 +1,12 @@
+"use client";
+
 import clsx from "clsx";
 import styles from "./navigation-buttons.module.scss";
 import { Link } from "@/components/link/link";
+import { useRouter } from "next/navigation";
 
 type NavigationLink = {
-  route: string;
+  route?: string;
   name: string;
   disabled?: boolean;
 };
@@ -15,6 +18,8 @@ type NavigationButtonsProps = {
 export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
   links,
 }) => {
+  const router = useRouter();
+
   return (
     <div
       className={clsx(
@@ -22,11 +27,25 @@ export const NavigationButtons: React.FC<NavigationButtonsProps> = ({
         links.length === 1 && styles["buttons--single"]
       )}
     >
-      {links.map((link) => (
-        <Link disabled={link.disabled} key={link.route} href={link.route}>
-          {link.name}
-        </Link>
-      ))}
+      {links.map((link) =>
+        !link.route ? (
+          <button
+            className={styles["button"]}
+            key={link.name}
+            onClick={() => router.back()}
+          >
+            {link.name}
+          </button>
+        ) : (
+          <Link
+            disabled={link.disabled}
+            href={link.route || "/"}
+            key={link.route}
+          >
+            {link.name}
+          </Link>
+        )
+      )}
     </div>
   );
 };
