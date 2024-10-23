@@ -1,30 +1,44 @@
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
+import { Metadata } from "next";
+import { Modal } from "@/components/modal/modal";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
+import { defaultTitle } from "@/config/metadata";
+
+export const metadata: Metadata = {
+  title: `Game Theory 101 | ${defaultTitle}`,
+};
 
 export default function Page() {
   return (
     <Container
       image={
         <ImageArea
-          src="/images/c74ad2f8-1d1a-4c86-8086-6d129fb8676b.png"
           alt="Game Theory 101 Teacher"
+          src="/images/c74ad2f8-1d1a-4c86-8086-6d129fb8676b.png"
         />
       }
       text={
         <TextArea>
+          <h1>What is Game Theory?</h1>
           <p>
-            Game theory is a framework used to model strategic interactions
-            between individuals or groups. It helps us analyze situations where
-            the outcome of one person&apos;s decision depends on the decisions
-            made by others.
+            Game theory is a concept from economics used to model strategic
+            interactions between individuals or groups. It helps us analyze
+            situations where the outcome of one person&apos;s decision depends
+            on the decisions made by others.
           </p>
           <p>
-            At its core, game theory studies how participants (called
-            &quot;players&quot;) make decisions in competitive environments.
-            These decisions impact not only their own outcomes but also the
-            outcomes of others involved.
+            Developed by mathematician John von Neumann and economist Oskar
+            Morgenstern{" "}
+            <Modal triggerText="in the 1940s">
+              John von Neumann and Oskar Morgenstern authored the &apos;Theory
+              of Games and Economic Behavior&apos;, published in 1944. It is
+              considered the text that created the interdisciplinary research
+              field of game theory.
+            </Modal>
+            , game theory has become a key tool to study decision-making and
+            competitive behavior.
           </p>
           <p>Some key concepts within game theory include:</p>
           <ul>
@@ -50,8 +64,8 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/", name: "Back" },
-            { route: "/gathering-allies", name: "Gather Allies" },
+            { name: "Back" },
+            { route: "/gather-tools", name: "Gather Tools" },
           ]}
         />
       }

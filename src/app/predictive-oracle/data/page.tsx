@@ -114,7 +114,7 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/predictive-oracle", name: "Back" },
+            { name: "Back" },
             { route: "/gamification-magic", name: "Gamification Magic" },
           ]}
         />

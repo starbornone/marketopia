@@ -1,14 +1,16 @@
 import { Container } from "@/components/container/container";
-import { TextArea } from "@/components/text-area/text-area";
+import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
+import { TextArea } from "@/components/text-area/text-area";
+import { defaultTitle } from "@/config/metadata";
+
+export const metadata: Metadata = {
+  title: `Credits | ${defaultTitle}`,
+};
 
 export default function Page() {
   return (
-    <Container
-      buttons={
-        <NavigationButtons links={[{ route: "/", name: "Return Home" }]} />
-      }
-    >
+    <Container buttons={<NavigationButtons links={[{ name: "Back" }]} />}>
       <TextArea align="center">
         <h1>Credits</h1>
         <p>

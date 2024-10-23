@@ -29,7 +29,7 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/gamification-magic", name: "Back" },
+            { name: "Back" },
             {
               route: "/gamification-magic/personalized-incentives",
               name: "Personalized Incentives",

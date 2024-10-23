@@ -117,7 +117,7 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/gamification-magic", name: "Back" },
+            { name: "Back" },
             {
               route: "/victory-rewards",
               name: "Victory Rewards",

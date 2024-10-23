@@ -197,7 +197,7 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/predictive-oracle", name: "Back" },
+            { name: "Back" },
             { route: "/predictive-oracle/data", name: "Data" },
           ]}
         />

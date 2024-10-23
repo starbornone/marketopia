@@ -1,7 +1,13 @@
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
+import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
+import { defaultTitle } from "@/config/metadata";
+
+export const metadata: Metadata = {
+  title: `Disclaimer | ${defaultTitle}`,
+};
 
 export default function Page() {
   return (
@@ -13,7 +19,7 @@ export default function Page() {
         />
       }
       text={
-        <TextArea size="small">
+        <TextArea>
           <h1>Disclaimer</h1>
           <p>
             All characters, events, locations, and entities depicted in this web
@@ -43,7 +49,7 @@ export default function Page() {
       buttons={
         <NavigationButtons
           links={[
-            { route: "/", name: "Return Home" },
+            { name: "Back" },
             {
               route: "/call-to-adventure",
               name: "Call to Adventure",
