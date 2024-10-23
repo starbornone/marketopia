@@ -1,39 +1,61 @@
 .tooltip {
-  position: relative;
-  display: inline-block;
   cursor: help;
-}
+  display: inline-block;
+  position: relative;
 
-.tooltipText {
-  visibility: hidden;
-  width: 220px;
-  background-color: var(--secondary-color);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: var(--spacing-small);
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Position above the element */
-  left: 50%;
-  margin-left: -110px; /* Center the tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+  &__trigger {
+    color: var(--primary-color);
+    position: relative;
+    text-decoration: underline dotted;
+  }
 
-  /* Arrow pointing down */
-  &::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: var(--secondary-color) transparent transparent transparent;
+  &:hover > .tooltip__trigger,
+  &:focus > .tooltip__trigger {
+    color: var(--hover-color);
+    text-decoration: underline solid;
+  }
+
+  &:hover .tooltip__text,
+  &:focus .tooltip__text {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-.tooltip:hover .tooltipText {
-  visibility: visible;
+.tooltip__text {
+  background-color: var(--secondary-color);
+  border-radius: 0.6rem;
+  bottom: calc(100% + 0.5rem);
+  color: #fff;
+  left: 50%;
+  max-width: 30rem;
+  min-width: 10rem;
+  opacity: 0;
+  overflow-wrap: break-word;
+  padding: var(--spacing-small);
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
+  word-break: break-word;
+  word-wrap: break-word;
+  z-index: 61;
+
+  &::after {
+    border-color: var(--secondary-color) transparent transparent transparent;
+    border-style: solid;
+    border-width: 0.5rem;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+.tooltip:hover .tooltip__text,
+.tooltip:focus .tooltip__text {
   opacity: 1;
+  visibility: visible;
 }

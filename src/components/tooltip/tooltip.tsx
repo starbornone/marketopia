@@ -6,9 +6,9 @@ export const Tooltip: React.FC<{
   children?: React.ReactNode;
 }> = ({ text, children }) => {
   return (
-    <div className={styles.tooltip}>
-      {children}
-      <span className={styles.tooltipText}>{text}</span>
-    </div>
+    <span className={styles.tooltip} tabIndex={0}>
+      <span className={styles["tooltip__trigger"]}>{children}</span>
+      <span className={styles["tooltip__text"]}>{text}</span>
+    </span>
   );
 };
