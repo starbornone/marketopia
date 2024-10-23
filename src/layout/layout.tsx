@@ -1,6 +1,6 @@
 "use client";
 
-import "./layout.scss";
+import styles from "./layout.module.scss";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -23,11 +23,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div
       className={clsx(
-        "background",
-        isRootRoute ? "background-home" : "background-other"
+        styles["background"],
+        isRootRoute ? styles["background-home"] : styles["background-other"]
       )}
     >
-      <div className={clsx("overlay", "overlay--enter")}>
+      <div className={clsx(styles["overlay"], styles["overlay--enter"])}>
         <Transition
           key={pathname}
           initial={{ opacity: 0, x: "100vw" }}

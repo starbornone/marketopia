@@ -8,9 +8,13 @@
   --shadow-color: rgba(60, 60, 80, 1);
   --text-color: rgba(80, 80, 80, 1);
   --text-muted-color: rgba(150, 150, 150, 1);
-  --padding-large: 2.4rem;
-  --padding-medium: 1.2rem;
-  --padding-small: 0.6rem;
+  --spacing-large: 2.4rem;
+  --spacing-medium: 1.2rem;
+  --spacing-small: 0.6rem;
+  --spacing-tiny: 0.2rem;
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.6rem;
 }
 
 body {
@@ -36,7 +40,7 @@ p {
   color: var(--text-color);
   font-size: 1.2rem;
   line-height: 1.6;
-  margin: var(--padding-small) 0;
+  margin: var(--spacing-small) 0;
 }
 
 p.emphasis {
@@ -49,12 +53,12 @@ ol {
   color: var(--text-color);
   font-size: 1.2rem;
   list-style-type: disc;
-  margin: var(--padding-small) 0;
+  margin: var(--spacing-small) 0;
   list-style-position: inside;
 }
 
 li {
-  margin: var(--padding-small) 0;
+  margin: var(--spacing-small) 0;
   line-height: 1.6;
 }
 
@@ -66,11 +70,6 @@ a {
   &:hover {
     color: var(--accent-color);
   }
-}
-
-.container {
-  text-align: center;
-  padding: var(--padding-large);
 }
 
 fieldset {
@@ -86,9 +85,9 @@ select {
   color: var(--text-color);
   font-family: "Lexend", sans-serif;
   font-size: 1rem;
-  margin: var(--padding-small) 0;
+  margin: var(--spacing-small) 0;
   max-width: 200px;
-  padding: var(--padding-small);
+  padding: var(--spacing-small);
   width: 100%;
 
   &:focus {
@@ -110,7 +109,7 @@ button {
   cursor: pointer;
   font-family: "Lexend", sans-serif;
   font-size: 1.2rem;
-  padding: var(--padding-small) var(--padding-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
   transition: background-color 0.3s ease;
 
   &:hover {
