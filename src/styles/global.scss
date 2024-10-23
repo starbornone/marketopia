@@ -38,20 +38,20 @@ h2 {
 
 p {
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: var(--font-size-medium);
   line-height: 1.6;
   margin: var(--spacing-small) 0;
 }
 
 p.emphasis {
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: var(--font-size-large);
+  text-align: center !important;
 }
 
 ul,
 ol {
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: var(--font-size-medium);
   list-style-type: disc;
   margin: var(--spacing-small) 0;
   list-style-position: inside;
@@ -102,17 +102,19 @@ select {
 }
 
 button {
-  background-color: var(--highlight-color);
+  background-color: var(--secondary-color);
   border-radius: 2rem;
-  border: none;
-  color: white;
+  border: 2px solid var(--secondary-color);
+  color: var(--neutral-color);
   cursor: pointer;
   font-family: "Lexend", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: var(--spacing-small) var(--spacing-medium);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+    color: var(--accent-color);
   }
 }
