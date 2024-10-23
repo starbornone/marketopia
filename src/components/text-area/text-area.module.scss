@@ -1,6 +1,6 @@
 .text-area {
   margin-bottom: var(--spacing-medium);
-  max-height: 50vh;
+  max-height: 54vh;
   overflow-y: auto;
   width: 100%;
 }
@@ -22,7 +22,22 @@
   font-size: var(--font-size-small);
 }
 
-.text-area h1 {
+.text-area h1,
+.text-area h2 {
   margin: 0;
   text-align: center;
+}
+
+.text-area h2:not(:first-child) {
+  margin: var(--spacing-medium) 0 0 0;
+}
+
+.text-area p {
+  text-align: left;
+}
+
+.text-area ul,
+.text-area ol {
+  margin: var(--spacing-small) 0;
+  list-style-position: inside;
 }

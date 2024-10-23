@@ -1,24 +1,24 @@
-import * as React from "react";
-import styles from "./text-area.module.scss";
+import React from "react";
 import clsx from "clsx";
+import styles from "./text-area.module.scss";
 
 type TextAreaProps = {
   align?: "center" | "left" | "right";
-  children: React.ReactNode;
   size?: "large" | "small";
+  children: React.ReactNode;
 };
 
 export const TextArea: React.FC<TextAreaProps> = ({
   align,
-  children,
   size,
+  children,
 }) => {
   return (
     <div
       className={clsx(
         styles["text-area"],
-        styles[`text-area--align-${align}`],
-        styles[`text-area--size-${size}`]
+        align && styles[`text-area--align-${align}`],
+        size && styles[`text-area--size-${size}`]
       )}
     >
       {children}
