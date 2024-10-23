@@ -10,10 +10,14 @@ export default function Page() {
       text={
         <TextArea>
           <p>
-            Welcome, brave strategists, to the realm of Marketopia. Our kingdom
-            faces the formidable Churn Dragon threatening our customer base.
-            Embark on your quest using game theory, predictive analytics, and
-            gamification.
+            Welcome, brave strategists, to the realm of Marketopia! We are here
+            to assist Queen Celeste Mailer in her quest to save the kingdom from
+            its latest threat.
+          </p>
+          <p>
+            The formidable Churn Dragon threatens our customer base, so we much
+            embark on a quest together using game theory, predictive analytics,
+            and gamification.
           </p>
         </TextArea>
       }

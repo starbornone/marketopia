@@ -1,16 +1,15 @@
-import * as React from "react";
+import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
-import { Container } from "@/components/container/container";
 
 export default function Page() {
   return (
     <Container
       image={
         <ImageArea
-          src="/images/4c505b4a-b2da-43b2-a597-6e912ad76ea2.png"
-          alt="Queen Celeste Mailer"
+          src="/images/c74ad2f8-1d1a-4c86-8086-6d129fb8676b.png"
+          alt="Game Theory 101 Teacher"
         />
       }
       text={
@@ -42,10 +41,9 @@ export default function Page() {
             </li>
           </ul>
           <p>
-            In the context of our journey, we&apos;ll apply game theory to
-            understand competitors&apos; actions, customer behavior, and how to
-            craft strategies that maximize our own outcomes while anticipating
-            the moves of others.
+            We&apos;ll apply game theory to understand competitors&apos;
+            actions, customer behavior, and how to craft strategies that
+            maximize our own outcomes while anticipating the moves of others.
           </p>
         </TextArea>
       }
