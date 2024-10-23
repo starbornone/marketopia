@@ -2,9 +2,10 @@ import "@/styles/global.scss";
 import type { Metadata } from "next";
 import { Layout } from "@/layout/layout";
 import { Lexend } from "next/font/google";
+import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: "Marketopia Adventures",
+  title: defaultTitle,
   description:
     "Join us on a journey through Marketopia, where we'll delve into collaborative strategies to outmanoeuvre competitors, harness predictive analytics to understand customer behaviours and implement gamification techniques to engage and retain our audience. Together, we'll navigate the challenges and unlock powerful tactics!",
 };
