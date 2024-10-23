@@ -5,7 +5,7 @@ import { Container } from "@/components/container/container";
 import { Chart } from "@/components/chart/chart";
 import { TextArea } from "@/components/text-area/text-area";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
-import styles from "./simulation.module.scss";
+import styles from "./_simulation.module.scss";
 
 export const Simulation = () => {
   const [competitorPrice, setCompetitorPrice] = useState(99);

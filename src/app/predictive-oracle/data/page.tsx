@@ -1,12 +1,12 @@
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
+import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
-import { Metadata } from "next";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Predictive Oracle | ${defaultTitle}`,
+  title: `The Role of Data and Weighting | ${defaultTitle}`,
 };
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
       image={
         <ImageArea
           src="/images/a3f2f4bc-60a2-4d75-895d-676f299ba274.png"
-          alt="The Predictive Oracle"
+          alt="The Role of Data and Weighting"
         />
       }
       text={

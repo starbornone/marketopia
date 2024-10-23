@@ -1,12 +1,12 @@
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
+import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
-import { Metadata } from "next";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Predictive Oracle | ${defaultTitle}`,
+  title: `The Power of Predictive Analytics | ${defaultTitle}`,
 };
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
       image={
         <ImageArea
           src="/images/a3f2f4bc-60a2-4d75-895d-676f299ba274.png"
-          alt="The Predictive Oracle"
+          alt="The Power of Predictive Analytics"
         />
       }
       text={
@@ -34,25 +34,6 @@ export default function Page() {
             to understand customer behavior. By collecting data on how customers
             interact with your service, their purchase patterns, and feedback,
             you can build a detailed profile of their experience.
-          </p>
-
-          <h3>Churn Prediction Models</h3>
-          <p>
-            Churn prediction models analyze this data to identify patterns
-            common among customers who leave. These models can include variables
-            like:
-          </p>
-          <ul>
-            <li>Frequency of service usage</li>
-            <li>Customer satisfaction scores</li>
-            <li>Time since last interaction</li>
-            <li>Competitive offers in the market</li>
-          </ul>
-          <p>
-            By adjusting these variables in real-time, businesses can predict
-            which customers are at risk and intervene with proactive strategies,
-            such as offering promotions, personalized messages, or targeted
-            support to keep them engaged.
           </p>
 
           <h3>Integrating Predictive Analytics in Web Apps</h3>
@@ -74,7 +55,7 @@ export default function Page() {
         <NavigationButtons
           links={[
             { name: "Back" },
-            { route: "/predictive-oracle/dashboard", name: "Dashboard" },
+            { route: "/predictive-oracle/models", name: "Prediction Models" },
           ]}
         />
       }
