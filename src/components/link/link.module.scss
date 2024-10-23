@@ -1,5 +1,5 @@
 .link {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 2rem;
   border: 2px solid var(--primary-color);
   color: var(--neutral-color);
@@ -9,7 +9,8 @@
 }
 
 .link:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .link--size-small {
