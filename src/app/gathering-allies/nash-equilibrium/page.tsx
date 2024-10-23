@@ -1,12 +1,12 @@
 import * as React from "react";
-import VisualNovelLayout from "@/components/visual-novel-layout/visual-novel-layout";
-import ImageArea from "@/components/image-area/image-area";
-import TextArea from "@/components/text-area/text-area";
-import NavigationButtons from "@/components/navigation-buttons/navigation-buttons";
+import { Container } from "@/components/container/container";
+import { ImageArea } from "@/components/image-area/image-area";
+import { TextArea } from "@/components/text-area/text-area";
+import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 
 export default function Page() {
   return (
-    <VisualNovelLayout
+    <Container
       image={
         <ImageArea
           src="/images/d14ffd76-14ed-436e-adad-f977c037a873.png"

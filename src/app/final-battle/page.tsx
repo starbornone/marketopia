@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 
-import VisualNovelLayout from "@/components/visual-novel-layout/visual-novel-layout";
-import ImageArea from "@/components/image-area/image-area";
-import TextArea from "@/components/text-area/text-area";
+import { Container } from "@/components/container/container";
+import { ImageArea } from "@/components/image-area/image-area";
+import { TextArea } from "@/components/text-area/text-area";
 import styles from "./final-battle.module.scss";
-import NavigationButtons from "@/components/navigation-buttons/navigation-buttons";
+import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 
 export default function Page() {
   const [engagement, setEngagement] = useState(0);
@@ -54,7 +54,7 @@ export default function Page() {
   };
 
   return (
-    <VisualNovelLayout
+    <Container
       image={
         <ImageArea
           src={

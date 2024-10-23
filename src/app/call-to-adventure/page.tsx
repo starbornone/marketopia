@@ -1,12 +1,11 @@
-import * as React from "react";
-import ImageArea from "@/components/image-area/image-area";
-import NavigationButtons from "@/components/navigation-buttons/navigation-buttons";
-import TextArea from "@/components/text-area/text-area";
-import VisualNovelLayout from "@/components/visual-novel-layout/visual-novel-layout";
+import { Container } from "@/components/container/container";
+import { ImageArea } from "@/components/image-area/image-area";
+import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
+import { TextArea } from "@/components/text-area/text-area";
 
 export default function Page() {
   return (
-    <VisualNovelLayout
+    <Container
       image={<ImageArea src="/images/kingdom.png" alt="Marketopia" />}
       text={
         <TextArea>

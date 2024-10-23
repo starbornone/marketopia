@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import VisualNovelLayout from "@/components/visual-novel-layout/visual-novel-layout";
-import ChartComponent from "@/components/chart/chart";
-import TextArea from "@/components/text-area/text-area";
-import NavigationButtons from "@/components/navigation-buttons/navigation-buttons";
+import { Container } from "@/components/container/container";
+import { Chart } from "@/components/chart/chart";
+import { TextArea } from "@/components/text-area/text-area";
+import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 
 import styles from "./simulation.module.scss";
 
@@ -31,9 +31,9 @@ export default function Page() {
   };
 
   return (
-    <VisualNovelLayout
+    <Container
       image={
-        <ChartComponent
+        <Chart
           dataA={campaignPrice}
           dataB={competitorPrice}
           label="Pricing Strategy"

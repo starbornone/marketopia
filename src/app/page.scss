@@ -10,7 +10,7 @@
 
 .main-menu__title {
   font-size: 4rem;
-  margin-bottom: var(--padding-large);
+  margin-bottom: var(--spacing-large);
   letter-spacing: 0.2rem;
   color: var(--accent-color);
   text-shadow: 2px 2px 4px var(--shadow-color);
@@ -19,19 +19,5 @@
 .main-menu__options {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-medium);
-}
-
-.main-menu__button {
-  background-color: var(--secondary-color);
-  color: var(--neutral-color);
-  padding: var(--padding-small) var(--padding-medium);
-  border: 2px solid var(--primary-color);
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.main-menu__button:hover {
-  background-color: var(--primary-color);
+  gap: var(--spacing-medium);
 }
