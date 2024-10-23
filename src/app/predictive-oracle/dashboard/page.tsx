@@ -1,14 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import styles from "./dashboard.module.scss";
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
-import { TextArea } from "@/components/text-area/text-area";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
-import Tooltip from "@/components/tooltip/tooltip";
-import styles from "./dashboard.module.scss";
-
+import { TextArea } from "@/components/text-area/text-area";
+import { Tooltip } from "@/components/tooltip/tooltip";
 import { logisticRegressionModel } from "@/utils/logisticRegression";
 import { randomForestModel } from "@/utils/randomForest";
 import { xgboostModel } from "@/utils/xgboost";

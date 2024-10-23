@@ -1,9 +1,13 @@
-import * as React from "react";
-
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
-import { TextArea } from "@/components/text-area/text-area";
+import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
+import { TextArea } from "@/components/text-area/text-area";
+import { defaultTitle } from "@/config/metadata";
+
+export const metadata: Metadata = {
+  title: `Gamification Magic | ${defaultTitle}`,
+};
 
 export default function Page() {
   return (
