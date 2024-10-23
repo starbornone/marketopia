@@ -1,26 +1,27 @@
 import * as React from "react";
-import styles from "./visual-novel-layout.module.scss";
+import styles from "./container.module.scss";
 
-type VisualNovelLayoutProps = {
-  image?: React.ReactNode;
-  text: React.ReactNode;
+type ContainerProps = {
   buttons?: React.ReactNode;
+  children?: React.ReactNode;
+  image?: React.ReactNode;
+  text?: React.ReactNode;
 };
 
-const VisualNovelLayout: React.FC<VisualNovelLayoutProps> = ({
+export const Container: React.FC<ContainerProps> = ({
+  buttons,
+  children,
   image,
   text,
-  buttons,
 }) => {
   return (
     <div className={styles["visual-novel"]}>
       <div className={styles["visual-novel__content"]}>
         {image}
         {text}
+        {children}
         {buttons}
       </div>
     </div>
   );
 };
-
-export default VisualNovelLayout;
