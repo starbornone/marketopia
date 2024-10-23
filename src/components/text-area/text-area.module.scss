@@ -1,5 +1,28 @@
 .text-area {
-  margin-bottom: var(--padding-medium);
+  margin-bottom: var(--spacing-medium);
   max-height: 50vh;
   overflow-y: auto;
+  width: 100%;
+}
+
+.text-area--align-left {
+  text-align: left;
+}
+
+.text-area--align-center {
+  text-align: center;
+}
+
+.text-area--align-right {
+  text-align: right;
+}
+
+.text-area--size-small,
+.text-area--size-small p {
+  font-size: var(--font-size-small);
+}
+
+.text-area h1 {
+  margin: 0;
+  text-align: center;
 }

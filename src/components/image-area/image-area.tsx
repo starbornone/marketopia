@@ -7,12 +7,10 @@ type ImageAreaProps = {
   alt: string;
 };
 
-const ImageArea: React.FC<ImageAreaProps> = ({ src, alt }) => {
+export const ImageArea: React.FC<ImageAreaProps> = ({ src, alt }) => {
   return (
     <div className={styles["image-area"]}>
       <img src={src} alt={alt} />
     </div>
   );
 };
-
-export default ImageArea;

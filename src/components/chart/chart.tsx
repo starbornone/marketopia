@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Chart, registerables } from "chart.js";
+import { Chart as ChartComponent, registerables } from "chart.js";
 import { useEffect, useRef } from "react";
 
-Chart.register(...registerables);
+ChartComponent.register(...registerables);
 
 type ChartProps = {
   dataA: number;
@@ -13,13 +13,13 @@ type ChartProps = {
   labels: string[];
 };
 
-const ChartComponent: React.FC<ChartProps> = ({
+export const Chart: React.FC<ChartProps> = ({
   dataA,
   dataB,
   label,
   labels,
 }) => {
-  const chartRef = useRef<Chart | null>(null);
+  const chartRef = useRef<ChartComponent | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const ChartComponent: React.FC<ChartProps> = ({
       const ctx = canvasRef.current.getContext("2d");
 
       if (ctx && !chartRef.current) {
-        chartRef.current = new Chart(ctx, {
+        chartRef.current = new ChartComponent(ctx, {
           type: "bar",
           data: {
             labels,
@@ -60,5 +60,3 @@ const ChartComponent: React.FC<ChartProps> = ({
 
   return <canvas ref={canvasRef} />;
 };
-
-export default ChartComponent;

@@ -1,0 +1,23 @@
+.link {
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  border: 2px solid var(--primary-color);
+  color: var(--neutral-color);
+  cursor: pointer;
+  padding: var(--spacing-small) var(--spacing-medium);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.link:hover {
+  background-color: var(--primary-color);
+}
+
+.link--size-small {
+  font-size: var(--font-size-small);
+  padding: var(--spacing-tiny) var(--spacing-small);
+}
+
+.link--size-large {
+  font-size: var(--font-size-large);
+  padding: var(--spacing-medium) var(--spacing-large);
+}
