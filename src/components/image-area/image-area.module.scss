@@ -12,14 +12,14 @@
 
   &::before {
     background: rgba(240, 235, 225, 1);
-    border-radius: 50% 50% 0 0;
+    border-radius: 100% 100% 0 0;
     bottom: 0;
     content: "";
-    height: 100px;
+    height: 300px;
     left: 50%;
     position: absolute;
-    transform: translateX(-50%);
-    width: 200%;
+    transform: translateX(-50%) translateY(66%);
+    width: 150%;
   }
 
   img {
