@@ -59,8 +59,8 @@ export default function Page() {
         <ImageArea
           src={
             victory
-              ? "/src/assets/e24b8447-4492-46ff-b23c-b778a47dacd4.png"
-              : "/src/assets/3df516b1-8cce-4b61-9af5-519719257762.png"
+              ? "/images/e24b8447-4492-46ff-b23c-b778a47dacd4.png"
+              : "/images/3df516b1-8cce-4b61-9af5-519719257762.png"
           }
           alt="The Final Battle"
         />

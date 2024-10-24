@@ -1,13 +1,24 @@
 :root {
-  --primary-color: rgba(85, 65, 125, 1);
-  --secondary-color: rgba(45, 45, 68, 1);
-  --highlight-color: rgba(200, 50, 70, 1);
-  --accent-color: rgba(255, 215, 110, 1);
-  --background-color: rgba(200, 225, 255, 1);
-  --neutral-color: rgba(240, 235, 225, 1);
-  --shadow-color: rgba(60, 60, 80, 1);
-  --text-color: rgba(80, 80, 80, 1);
-  --text-muted-color: rgba(150, 150, 150, 1);
+  --color-blue-100: rgba(220, 240, 255, 1);
+  --color-blue-300: rgba(170, 200, 240, 1);
+  --color-blue-200: rgba(200, 225, 255, 1);
+  --color-gold-300: rgba(255, 230, 150, 1);
+  --color-gold-500: rgba(255, 215, 110, 1);
+  --color-gray-100: rgba(200, 200, 200, 1);
+  --color-gray-300: rgba(120, 120, 120, 1);
+  --color-gray-200: rgba(150, 150, 150, 1);
+  --color-gray-500: rgba(80, 80, 80, 1);
+  --color-blue-gray-500: rgba(100, 100, 130, 1);
+  --color-blue-gray-800: rgba(60, 60, 80, 1);
+  --color-neutral-100: rgba(250, 245, 235, 1);
+  --color-neutral-200: rgba(240, 235, 225, 1);
+  --color-purple-300: rgba(150, 120, 180, 1);
+  --color-purple-500: rgba(85, 65, 125, 1);
+  --color-purple-700: rgba(60, 50, 100, 1);
+  --color-purple-800: rgba(45, 45, 68, 1);
+  --color-red-300: rgba(230, 100, 120, 1);
+  --color-red-500: rgba(200, 50, 70, 1);
+  --color-red-700: rgba(150, 30, 50, 1);
   --spacing-large: 2.4rem;
   --spacing-medium: 1.2rem;
   --spacing-small: 0.6rem;
@@ -18,26 +29,34 @@
 }
 
 body {
-  color: var(--text-color);
+  color: var(--color-gray-500);
   font-family: "Lexend", sans-serif;
   margin: 0;
 }
 
 h1,
-h2 {
-  color: var(--primary-color);
+h2,
+h3 {
+  color: var(--color-purple-500);
 }
 
 h1 {
   font-size: 3.5rem;
+  font-weight: 800;
 }
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 
 p {
-  color: var(--text-color);
+  color: var(--color-gray-500);
   font-size: var(--font-size-medium);
   line-height: 1.6;
   margin: var(--spacing-small) 0;
@@ -48,13 +67,18 @@ p.emphasis {
   text-align: center !important;
 }
 
+strong {
+  color: var(--color-red-500);
+}
+
 ul,
 ol {
-  color: var(--text-color);
+  color: var(--color-gray-500);
   font-size: var(--font-size-medium);
-  list-style-type: disc;
-  margin: var(--spacing-small) 0;
   list-style-position: inside;
+  list-style-type: disc;
+  margin: var(--spacing-medium) 0;
+  padding: 0;
 }
 
 li {
@@ -63,12 +87,12 @@ li {
 }
 
 a {
-  color: var(--highlight-color);
+  color: var(--color-red-500);
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--accent-color);
+    color: var(--color-gold-500);
   }
 }
 
@@ -79,10 +103,10 @@ fieldset {
 input,
 textarea,
 select {
-  background-color: var(--neutral-color);
+  background-color: var(--color-neutral-200);
   border-radius: 2rem;
-  border: 1px solid var(--secondary-color);
-  color: var(--text-color);
+  border: 1px solid var(--color-purple-800);
+  color: var(--color-gray-500);
   font-family: "Lexend", sans-serif;
   font-size: 1rem;
   margin: var(--spacing-small) 0;
@@ -91,21 +115,21 @@ select {
   width: 100%;
 
   &:focus {
-    border-color: var(--highlight-color);
-    box-shadow: 0 0 5px var(--highlight-color);
+    border-color: var(--color-red-500);
+    box-shadow: 0 0 5px var(--color-red-500);
     outline: none;
   }
 
   &::placeholder {
-    color: var(--text-muted-color);
+    color: var(--color-gray-200);
   }
 }
 
 button {
-  background-color: var(--secondary-color);
+  background-color: var(--color-purple-800);
   border-radius: 2rem;
-  border: 2px solid var(--secondary-color);
-  color: var(--neutral-color);
+  border: 2px solid var(--color-purple-800);
+  color: var(--color-neutral-200);
   cursor: pointer;
   font-family: "Lexend", sans-serif;
   font-size: 1rem;
@@ -113,8 +137,8 @@ button {
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--primary-color);
-    color: var(--accent-color);
+    background-color: var(--color-purple-800);
+    border-color: var(--color-purple-500);
+    color: var(--color-gold-500);
   }
 }

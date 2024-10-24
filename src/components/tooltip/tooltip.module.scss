@@ -4,7 +4,7 @@
   position: relative;
 
   &__trigger {
-    color: var(--primary-color);
+    color: var(--color-purple-500);
     position: relative;
     text-decoration: underline dotted;
   }
@@ -23,7 +23,7 @@
 }
 
 .tooltip__text {
-  background-color: var(--secondary-color);
+  background-color: var(--color-purple-800);
   border-radius: 0.6rem;
   bottom: calc(100% + 0.5rem);
   color: #fff;
@@ -43,7 +43,7 @@
   z-index: 61;
 
   &::after {
-    border-color: var(--secondary-color) transparent transparent transparent;
+    border-color: var(--color-purple-800) transparent transparent transparent;
     border-style: solid;
     border-width: 0.5rem;
     content: "";

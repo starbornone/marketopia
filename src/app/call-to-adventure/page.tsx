@@ -13,22 +13,21 @@ export default function Page() {
   return (
     <Container
       image={
-        <ImageArea alt="The Realm of Marketopia" src="/images/kingdom.png" />
+        <ImageArea
+          alt="Queen Celeste Mailer"
+          src="/images/4c505b4a-b2da-43b2-a597-6e912ad76ea2.png"
+        />
       }
       text={
         <TextArea>
+          <h2>Welcome to Marketopia!</h2>
           <p>
-            Welcome, brave strategists, to the{" "}
-            <strong>Realm of Marketopia</strong>! We are here to assist Queen
-            Celeste Mailer in her quest to save the kingdom from its latest
-            threat.
-          </p>
-          <p>
-            The formidable <strong>Churn Dragon</strong> threatens our customer
-            base, and if left unchecked, it could drain the lifeblood of
-            Marketopia: our customers. The Churn Dragon represents the
-            ever-present danger of losing valuable clients who stop using our
-            tools.
+            We are here to assist Queen Celeste Mailer in her quest to save the
+            kingdom from its latest threat. The formidable{" "}
+            <strong>Churn Dragon</strong> threatens our customer base, and if
+            left unchecked, it could drain the lifeblood of Marketopia: our
+            customers. The Churn Dragon represents the ever-present danger of
+            losing valuable clients who stop using our tools.
           </p>
           <p>
             To defeat this menace, we must come together and wield the powers of{" "}

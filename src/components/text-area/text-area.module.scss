@@ -25,10 +25,18 @@
 .text-area h1,
 .text-area h2 {
   margin: 0;
+}
+
+.text-area h1,
+.text-area h2 {
   text-align: center;
 }
 
 .text-area h2:not(:first-child) {
+  margin: var(--spacing-medium) 0 0 0;
+}
+
+.text-area h3 {
   margin: var(--spacing-medium) 0 0 0;
 }
 

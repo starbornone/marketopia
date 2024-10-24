@@ -20,7 +20,7 @@ export default function Page() {
       }
       text={
         <TextArea>
-          <h1>Disclaimer</h1>
+          <h2>Disclaimer</h2>
           <p>
             All characters, events, locations, and entities depicted in this web
             app are entirely fictional. Any resemblance to real persons, living

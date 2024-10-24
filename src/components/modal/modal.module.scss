@@ -12,9 +12,9 @@
 }
 
 .modal__content {
-  background-color: var(--neutral-color);
+  background-color: var(--color-neutral-200);
   border-radius: 1rem;
-  box-shadow: 0 4px 10px var(--shadow-color);
+  box-shadow: 0 4px 10px var(--color-blue-gray-800);
   display: flex;
   max-width: 600px;
   padding: var(--spacing-medium);
@@ -25,15 +25,15 @@
 .modal__close {
   background: none;
   border: none;
-  color: var(--highlight-color);
+  color: var(--color-red-500);
   cursor: pointer;
   font-size: 2rem;
   padding: 0.8rem;
   line-height: 0.8rem;
 
   &:hover {
-    background-color: var(--highlight-color);
-    color: var(--accent-color);
+    background-color: var(--color-red-500);
+    color: var(--color-gold-500);
   }
 }
 
@@ -43,12 +43,12 @@
 }
 
 .modal__trigger {
-  border-bottom: 1px dashed var(--primary-color);
-  color: var(--primary-color);
+  border-bottom: 1px dashed var(--color-purple-500);
+  color: var(--color-purple-500);
   cursor: pointer;
 
   &:hover {
-    border-color: var(--highlight-color);
-    color: var(--highlight-color);
+    border-color: var(--color-red-500);
+    color: var(--color-red-500);
   }
 }

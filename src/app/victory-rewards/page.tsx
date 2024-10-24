@@ -1,9 +1,7 @@
-import * as React from "react";
-
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
-import { TextArea } from "@/components/text-area/text-area";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
+import { TextArea } from "@/components/text-area/text-area";
 
 export default function Page() {
   return (
@@ -36,25 +34,20 @@ export default function Page() {
             working to retain customers, increase engagement, or stay ahead of
             the competition, these strategies will lead to lasting success.
           </p>
-          <h3>Treasure Chest</h3>
-          <ul>
-            <li>
-              <a href="/resources">Customer Retention Guide</a>
-            </li>
-            <li>
-              <a href="/resources">Predictive Analytics Toolkit</a>
-            </li>
-            <li>
-              <a href="/resources">Gamification in Marketing Playbook</a>
-            </li>
-          </ul>
           <p>
             Continue your quest and take these resources to master the art of
             customer retention!
           </p>
         </TextArea>
       }
-      buttons={<NavigationButtons links={[{ route: "/", name: "Home" }]} />}
+      buttons={
+        <NavigationButtons
+          links={[
+            { route: "/", name: "Home" },
+            { route: "/resources", name: "Resources" },
+          ]}
+        />
+      }
     />
   );
 }

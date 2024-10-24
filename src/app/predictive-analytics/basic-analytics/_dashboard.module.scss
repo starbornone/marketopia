@@ -8,12 +8,12 @@
 
 .slider {
   width: 100%;
-  background-color: var(--neutral-color);
+  background-color: var(--color-neutral-200);
   -webkit-appearance: none;
   appearance: none;
   height: 1rem;
   border-radius: 2rem;
-  background: var(--primary-color);
+  background: var(--color-purple-500);
   outline: none;
 
   &::-webkit-slider-thumb {
@@ -22,7 +22,7 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background: var(--highlight-color);
+    background: var(--color-red-500);
     cursor: pointer;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
@@ -31,7 +31,7 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background: var(--highlight-color);
+    background: var(--color-red-500);
     cursor: pointer;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }

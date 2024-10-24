@@ -6,14 +6,15 @@ import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
-import { logisticRegressionModel } from "@/utils/logisticRegression";
-import { randomForestModel } from "@/utils/randomForest";
-import { xgboostModel } from "@/utils/xgboost";
+import { logisticRegression } from "@/utils/more/logisticRegression";
+import { randomForestModel } from "@/utils/more/randomForest";
+import { xgboostModel } from "@/utils/more/xgboost";
 
 export const Dashboard = () => {
-  const [frequencyOfUsage, setFrequencyOfUsage] = useState(3);
-  const [satisfactionScore, setSatisfactionScore] = useState(7);
-  const [timeSinceLastInteraction, setTimeSinceLastInteraction] = useState(14);
+  const [engagementRate, setEngagementRate] = useState(50); // Percentage
+  const [accountTenure, setAccountTenure] = useState(12); // In months
+  const [campaignSuccess, setCampaignSuccess] = useState(2); // On a scale of 1-5 for CTR success
+  const [billingFrequency, setBillingFrequency] = useState("Monthly");
   const [churnProbability, setChurnProbability] = useState(0);
   const [selectedModel, setSelectedModel] = useState("Logistic Regression");
 
@@ -21,30 +22,34 @@ export const Dashboard = () => {
     let churn = 0;
 
     if (selectedModel === "Logistic Regression") {
-      churn = logisticRegressionModel(
-        satisfactionScore,
-        timeSinceLastInteraction,
-        frequencyOfUsage
+      churn = logisticRegression(
+        engagementRate,
+        accountTenure,
+        campaignSuccess,
+        billingFrequency
       );
     } else if (selectedModel === "Random Forest") {
       churn = randomForestModel(
-        satisfactionScore,
-        timeSinceLastInteraction,
-        frequencyOfUsage
+        engagementRate,
+        accountTenure,
+        campaignSuccess,
+        billingFrequency
       );
     } else if (selectedModel === "XGBoost") {
       churn = xgboostModel(
-        satisfactionScore,
-        timeSinceLastInteraction,
-        frequencyOfUsage
+        engagementRate,
+        accountTenure,
+        campaignSuccess,
+        billingFrequency
       );
     }
 
     setChurnProbability(Math.min(Math.max(churn, 0), 100));
   }, [
-    frequencyOfUsage,
-    satisfactionScore,
-    timeSinceLastInteraction,
+    engagementRate,
+    accountTenure,
+    campaignSuccess,
+    billingFrequency,
     selectedModel,
   ]);
 
@@ -53,54 +58,65 @@ export const Dashboard = () => {
       image={
         <ImageArea
           src="/images/060d8bac-c9eb-4c01-bddb-eab28502c7e8.png"
-          alt="Predictive Analytics Dashboard"
+          alt="More Analytics"
         />
       }
       text={
         <TextArea>
-          <h2>Predictive Analytics Dashboard</h2>
+          <h2>More Analytics</h2>
           <p>
-            In this simulation, you can adjust these variables and choose from
-            three different churn prediction models to see how they calculate
-            the likelihood of a customer churning.
+            In this simulation, adjust variables and choose from three different
+            churn prediction models to see how they calculate the likelihood of
+            a customer churning.
           </p>
 
           <form className={styles["form"]}>
             <fieldset>
-              <label htmlFor="frequency">Frequency of Usage</label>
+              <label htmlFor="engagement">Engagement Rate</label>
               <input
                 className={styles["slider"]}
-                id="frequency"
-                max="10"
-                min="1"
-                onChange={(e) => setFrequencyOfUsage(Number(e.target.value))}
-                type="range"
-                value={frequencyOfUsage}
-              />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="satisfaction">Satisfaction Score</label>
-              <input
-                className={styles["slider"]}
-                id="satisfaction"
-                max="10"
-                min="1"
-                onChange={(e) => setSatisfactionScore(Number(e.target.value))}
-                type="range"
-                value={satisfactionScore}
-              />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="time-since">Days Since Last Interaction</label>
-              <input
-                id="time-since"
+                id="engagement"
+                max="100"
                 min="0"
-                onChange={(e) =>
-                  setTimeSinceLastInteraction(Number(e.target.value))
-                }
-                type="number"
-                value={timeSinceLastInteraction}
+                onChange={(e) => setEngagementRate(Number(e.target.value))}
+                type="range"
+                value={engagementRate}
               />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="tenure">Account Tenure</label>
+              <input
+                className={styles["slider"]}
+                id="tenure"
+                max="60"
+                min="1"
+                onChange={(e) => setAccountTenure(Number(e.target.value))}
+                type="range"
+                value={accountTenure}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="campaign-success">Campaign Success</label>
+              <input
+                className={styles["slider"]}
+                id="campaign-success"
+                max="5"
+                min="1"
+                onChange={(e) => setCampaignSuccess(Number(e.target.value))}
+                type="range"
+                value={campaignSuccess}
+              />
+            </fieldset>
+            <fieldset>
+              <label htmlFor="billing">Billing Frequency</label>
+              <select
+                id="billing"
+                onChange={(e) => setBillingFrequency(e.target.value)}
+                value={billingFrequency}
+              >
+                <option value="Monthly">Monthly</option>
+                <option value="Yearly">Yearly</option>
+              </select>
             </fieldset>
           </form>
 
@@ -130,23 +146,20 @@ export const Dashboard = () => {
             <p>
               Logistic Regression uses a weighted sum of the variables and
               applies a sigmoid function to output a probability between 0 and
-              100. It assumes linear relationships between variables and churn
-              risk.
+              100.
             </p>
           )}
           {selectedModel === "Random Forest" && (
             <p>
-              Random Forest aggregates multiple decision trees to make a churn
-              prediction. It considers how different factors like satisfaction,
-              frequency, and time since the last interaction impact churn.
+              Random Forest aggregates decision trees to make a churn
+              prediction, considering factors like engagement, tenure, and
+              campaign performance.
             </p>
           )}
           {selectedModel === "XGBoost" && (
             <p>
-              XGBoost is a powerful model that builds multiple decision trees
-              sequentially, with each tree correcting the errors of the previous
-              ones. It&apos;s known for its high performance with larger
-              datasets.
+              XGBoost is a high-performance model that builds decision trees
+              sequentially, optimizing for churn prediction in complex datasets.
             </p>
           )}
         </TextArea>
@@ -155,7 +168,7 @@ export const Dashboard = () => {
         <NavigationButtons
           links={[
             { name: "Back" },
-            { route: "/predictive-oracle/data", name: "Data and Weighting" },
+            { route: "/predictive-analytics/data", name: "Data and Weighting" },
           ]}
         />
       }

@@ -9,7 +9,12 @@ export default function Page() {
         <Link href="/disclaimer" size="large">
           Start Adventure
         </Link>
-        <Link href="/credits">Credits</Link>
+        <Link appearance="secondary" href="/resources">
+          Resources
+        </Link>
+        <Link appearance="secondary" href="/credits">
+          Credits
+        </Link>
       </div>
     </div>
   );

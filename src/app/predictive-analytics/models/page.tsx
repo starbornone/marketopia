@@ -56,8 +56,8 @@ export default function Page() {
           links={[
             { name: "Back" },
             {
-              route: "/predictive-oracle/dashboard",
-              name: "Predictive Analytics Dashboard",
+              route: "/predictive-analytics/basic-analytics",
+              name: "Basic Analytics",
             },
           ]}
         />

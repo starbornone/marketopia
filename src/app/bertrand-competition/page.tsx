@@ -21,7 +21,7 @@ export default function Page() {
       }
       text={
         <TextArea>
-          <h1>Bertrand Competition</h1>
+          <h2>Bertrand Competition</h2>
           <p>
             In a Bertrand Competition, firms compete by setting prices rather
             than quantities. Each firm assumes that its competitors&apos; prices

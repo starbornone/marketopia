@@ -20,7 +20,7 @@ export default function Page() {
       }
       text={
         <TextArea>
-          <h1>Let&apos;s Gather Our Tools</h1>
+          <h2>Let&apos;s Gather Our Tools</h2>
           <p>
             Now that you&apos;ve heard the call, it&apos;s time to gather the
             tools we&apos;ll need for your journey. The realm&apos;s chief

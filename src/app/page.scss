@@ -5,15 +5,15 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  color: var(--text-color);
+  color: var(--color-gray-500);
 }
 
 .main-menu__title {
   font-size: 4rem;
   margin-bottom: var(--spacing-large);
   letter-spacing: 0.2rem;
-  color: var(--accent-color);
-  text-shadow: 2px 2px 4px var(--shadow-color);
+  color: var(--color-gold-500);
+  text-shadow: 2px 2px 4px var(--color-blue-gray-800);
 }
 
 .main-menu__options {

@@ -9,7 +9,7 @@ import styles from "./_simulation.module.scss";
 
 export const Simulation = () => {
   const [competitorPrice, setCompetitorPrice] = useState(99);
-  const [campaignPrice, setCampaignPrice] = useState(69);
+  const [campaignPrice, setCampaignPrice] = useState(75);
   const [marketShare, setMarketShare] = useState(0);
 
   const presets = [
@@ -89,7 +89,7 @@ export const Simulation = () => {
             { name: "Back" },
             {
               route: "/bertrand-competition/simulation/conclusion",
-              name: "Silumation Conclusion",
+              name: "Simulation Conclusion",
             },
           ]}
         />

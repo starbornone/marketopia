@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Predictive Analytics Dashboard | ${defaultTitle}`,
+  title: `Basic Analytics | ${defaultTitle}`,
 };
 
 export default function Page() {

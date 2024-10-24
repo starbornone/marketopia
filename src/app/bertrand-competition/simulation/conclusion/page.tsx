@@ -45,7 +45,7 @@ export default function Page() {
           links={[
             { name: "Back" },
             {
-              route: "/predictive-oracle",
+              route: "/predictive-analytics",
               name: "Predictive Oracle",
             },
           ]}

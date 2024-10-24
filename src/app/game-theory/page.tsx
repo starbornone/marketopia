@@ -15,13 +15,13 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          alt="Game Theory 101 Teacher"
+          alt="Game Theory 101"
           src="/images/c74ad2f8-1d1a-4c86-8086-6d129fb8676b.png"
         />
       }
       text={
         <TextArea>
-          <h1>What is Game Theory?</h1>
+          <h2>What is Game Theory?</h2>
           <p>
             Game theory is a concept from economics used to model strategic
             interactions between individuals or groups. It helps us analyze
@@ -65,7 +65,7 @@ export default function Page() {
         <NavigationButtons
           links={[
             { name: "Back" },
-            { route: "/gather-tools", name: "Gather Tools" },
+            { route: "/payoff-matrix", name: "Payoff Matrix" },
           ]}
         />
       }
