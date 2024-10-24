@@ -14,7 +14,7 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          src="/images/a3f2f4bc-60a2-4d75-895d-676f299ba274.png"
+          src="/images/060d8bac-c9eb-4c01-bddb-eab28502c7e8.png"
           alt="Prediction Models"
         />
       }

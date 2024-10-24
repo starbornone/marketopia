@@ -15,7 +15,7 @@ export default function Page() {
       image={
         <ImageArea
           alt="Gathering Allies"
-          src="/images/d14ffd76-14ed-436e-adad-f977c037a873.png"
+          src="/images/042be389-e61c-47ab-aed3-e6cc0cb3c68b.png"
         />
       }
       text={

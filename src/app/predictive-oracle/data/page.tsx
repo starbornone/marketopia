@@ -14,7 +14,7 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          src="/images/a3f2f4bc-60a2-4d75-895d-676f299ba274.png"
+          src="/images/c5741513-40fd-493c-a81f-c1a53d8b4812.png"
           alt="The Role of Data and Weighting"
         />
       }

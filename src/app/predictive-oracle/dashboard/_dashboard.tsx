@@ -52,7 +52,7 @@ export const Dashboard = () => {
     <Container
       image={
         <ImageArea
-          src="/images/a3f2f4bc-60a2-4d75-895d-676f299ba274.png"
+          src="/images/060d8bac-c9eb-4c01-bddb-eab28502c7e8.png"
           alt="Predictive Analytics Dashboard"
         />
       }
@@ -70,53 +70,50 @@ export const Dashboard = () => {
               <label htmlFor="frequency">Frequency of Usage</label>
               <input
                 className={styles["slider"]}
-                type="range"
                 id="frequency"
-                min="1"
                 max="10"
-                value={frequencyOfUsage}
+                min="1"
                 onChange={(e) => setFrequencyOfUsage(Number(e.target.value))}
+                type="range"
+                value={frequencyOfUsage}
               />
-              <div>{frequencyOfUsage}</div>
             </fieldset>
             <fieldset>
               <label htmlFor="satisfaction">Satisfaction Score</label>
               <input
                 className={styles["slider"]}
-                type="range"
                 id="satisfaction"
-                min="1"
                 max="10"
-                value={satisfactionScore}
+                min="1"
                 onChange={(e) => setSatisfactionScore(Number(e.target.value))}
+                type="range"
+                value={satisfactionScore}
               />
-              <div>{satisfactionScore}</div>
             </fieldset>
             <fieldset>
               <label htmlFor="time-since">Days Since Last Interaction</label>
               <input
-                type="number"
                 id="time-since"
                 min="0"
-                value={timeSinceLastInteraction}
                 onChange={(e) =>
                   setTimeSinceLastInteraction(Number(e.target.value))
                 }
+                type="number"
+                value={timeSinceLastInteraction}
               />
-              <div>{timeSinceLastInteraction}</div>
             </fieldset>
           </form>
 
           <div className={styles["model-selection"]}>
             <button
-              type="button"
               onClick={() => setSelectedModel("Logistic Regression")}
+              type="button"
             >
               Logistic Regression
             </button>
             <button
-              type="button"
               onClick={() => setSelectedModel("Random Forest")}
+              type="button"
             >
               Random Forest
             </button>

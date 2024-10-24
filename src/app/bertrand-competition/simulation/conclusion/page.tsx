@@ -14,8 +14,8 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          alt="Bertrand Competition"
-          src="/images/d14ffd76-14ed-436e-adad-f977c037a873.png"
+          alt="Bertrand Competition Simulation Conclusion"
+          src="/images/3e7188d4-02a2-4fa0-855e-79837efcc691.png"
         />
       }
       text={
