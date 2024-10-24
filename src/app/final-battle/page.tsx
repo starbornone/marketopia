@@ -67,26 +67,24 @@ export default function Page() {
       }
       text={
         <TextArea>
-          <p>
-            The moment has come. You stand at the gates of the Churn
-            Dragon&apos;s lair, ready for the ultimate showdown. With your
-            allies by your side, and the magic of gamification and predictive
-            analytics empowering your every move, it&apos;s time to defeat the
-            Churn Dragon once and for all.
-          </p>
-
-          <div className={styles["health-bar-container"]}>
-            <strong>Churn Dragon&apos;s Health:</strong>
-            <div className={styles["health-bar"]}>
-              <div
-                className={styles["health-bar-fill"]}
-                style={{ width: `${dragonHealth}%` }}
-              />
-            </div>
-          </div>
-
           {!victory ? (
             <>
+              <p>
+                The moment has come. You stand at the gates of the Churn
+                Dragon&apos;s lair, ready for the ultimate showdown. With your
+                allies by your side, and the magic of gamification and
+                predictive analytics empowering your every move, it&apos;s time
+                to defeat the Churn Dragon once and for all.
+              </p>
+              <div className={styles["health-bar-container"]}>
+                <strong>Churn Dragon&apos;s Health:</strong>
+                <div className={styles["health-bar"]}>
+                  <div
+                    className={styles["health-bar-fill"]}
+                    style={{ width: `${dragonHealth}%` }}
+                  />
+                </div>
+              </div>
               <ul>
                 <li>
                   <strong>Engagement Level:</strong> {engagement}/100
