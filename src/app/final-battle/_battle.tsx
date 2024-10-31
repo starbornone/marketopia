@@ -156,8 +156,8 @@ function Battle({ isVerbose }: { isVerbose: boolean }) {
         ) : (
           <p>
             The Churn Dragon roars in defeat, its grip on Marketopia shattered.
-            Your strategic prowess and the combined strength of your tactics
-            have led to a resounding victory. The realm is saved, and customer
+            Our strategic prowess and the combined strength of our tactics have
+            led to a resounding victory. The realm is saved, and customer
             loyalty is restored.
           </p>
         )}

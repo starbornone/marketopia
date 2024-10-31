@@ -76,10 +76,10 @@ function Dashboard({ isVerbose }: { isVerbose: boolean }) {
         {isVerbose ? (
           <>
             <p>
-              In this simulation, we can adjust key variables that influence
-              customer churn and choose from three different churn prediction
-              models to see how they calculate the likelihood of a customer
-              churning.
+              In this simulation, we examine four different key variables that
+              influence customer churn and choose from three different churn
+              prediction models to see how they calculate the likelihood of a
+              customer churning.
             </p>
             <p>
               <strong>Engagement Rate:</strong> This represents how actively a
