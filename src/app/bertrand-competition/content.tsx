@@ -33,20 +33,14 @@ function Content({ isVerbose }: { isVerbose: boolean }) {
             price. In a scenario where our services are identical to those
             offered by competitors, lowering prices to retain customers might
             only hurt us in the long term. If we engage in a price war, it will
-            eventually lead to lower profit margins without necessarily reducing
-            churn. Instead of focusing on price alone, we need to differentiate
-            through{" "}
+            eventually lead to lower profit margins without necessarily
+            increasing customer loyalty. Instead of focusing on price alone, we
+            need to differentiate through{" "}
             <Modal triggerText="value-added services">
               {valueAddedServices}
             </Modal>{" "}
-            that will keep customers loyal to Marketopia and help us escape the
+            that will keep customers loyal to Marketopia and help us escape the{" "}
             <strong>zero-profit trap</strong> of pure price competition.
-          </p>
-          <p>
-            Instead of getting trapped in the price-driven competition that
-            Bertrand models suggest, Marketopia must focus on offering a unique
-            value proposition that makes our services indispensable to
-            customers.
           </p>
         </TextArea>
       ) : (

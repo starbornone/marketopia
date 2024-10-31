@@ -6,7 +6,7 @@ import { NavigationButtons } from "@/components/navigation-buttons/navigation-bu
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Call to Adventure | ${defaultTitle}`,
+  title: `Welcome to Marketopia | ${defaultTitle}`,
 };
 
 function Page() {
@@ -24,7 +24,7 @@ function Page() {
             { name: "Back" },
             {
               route: "/game-theory",
-              name: "Game Theory 101",
+              name: "Game Theory",
             },
           ]}
         />

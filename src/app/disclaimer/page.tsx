@@ -24,8 +24,8 @@ export default function Page() {
           links={[
             { name: "Back" },
             {
-              route: "/call-to-adventure",
-              name: "Call to Adventure",
+              route: "/welcome",
+              name: "Welcome to Marketopia",
             },
           ]}
         />

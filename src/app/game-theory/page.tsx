@@ -6,7 +6,7 @@ import { NavigationButtons } from "@/components/navigation-buttons/navigation-bu
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Game Theory 101 | ${defaultTitle}`,
+  title: `Game Theory | ${defaultTitle}`,
 };
 
 export default function Page() {
@@ -14,7 +14,7 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          alt="Game Theory 101"
+          alt="Game Theory"
           src="/images/dd31ec25-863e-4ccf-91c7-5a5dae644741.png"
         />
       }

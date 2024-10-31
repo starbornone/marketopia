@@ -10,8 +10,7 @@ function Content({ isVerbose }: { isVerbose: boolean }) {
         <TextArea>
           <h2>Prediction Models</h2>
           <p>
-            Customer churn occurs when customers stop using a service. By
-            analyzing key factors that contribute to churn, businesses can
+            By analyzing key factors that contribute to churn, businesses can
             intervene early to retain customers. Here are common variables used
             in churn prediction models:
           </p>

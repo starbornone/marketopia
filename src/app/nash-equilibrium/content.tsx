@@ -35,10 +35,10 @@ function Content({ isVerbose }: { isVerbose: boolean }) {
           </p>
           <p>
             Understanding this equilibrium means recognizing that merely
-            reacting to competitors&apos; actions may not reduce churn. Instead,
-            we need innovative strategies that shift customer behavior by
-            offering unique value, breaking free from the Nash Equilibrium trap
-            where no party can gain by changing strategies alone.
+            reacting to competitors&apos; actions may not improve our situation.
+            Instead, we need innovative strategies that shift customer behavior
+            by offering unique value, breaking free from the Nash Equilibrium
+            trap where no party can gain by changing strategies alone.
           </p>
         </TextArea>
       ) : (
