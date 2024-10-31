@@ -58,7 +58,7 @@ export function Transition({
   const segment = useSelectedLayoutSegment();
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait">
       <motion.div
         animate={animate}
         className={className}

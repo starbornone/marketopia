@@ -27,7 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         isRootRoute ? styles["background-home"] : styles["background-other"]
       )}
     >
-      <div className={clsx(styles["overlay"], styles["overlay--enter"])}>
+      <div>
         <Transition
           key={pathname}
           initial={{ opacity: 0, x: "100vw" }}
