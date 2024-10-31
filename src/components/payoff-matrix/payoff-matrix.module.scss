@@ -25,10 +25,6 @@
     height: 80px;
   }
 
-  tr:nth-child(even) td {
-    background-color: var(--color-blue-200);
-  }
-
   .split {
     position: relative;
     overflow: hidden;
@@ -43,7 +39,7 @@
       background: linear-gradient(
         to bottom right,
         transparent 49.5%,
-        var(--color-gray-200) 50.5%
+        var(--color-gray-100) 50.5%
       );
     }
 
