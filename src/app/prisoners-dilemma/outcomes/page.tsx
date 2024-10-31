@@ -15,22 +15,22 @@ export default function Page() {
       image={
         <ImageArea
           alt="Prisoner's Dilemma Outcomes"
-          src="/images/81acb652-27fc-4699-a494-47d40aaf8b92.png"
+          src="/images/50e09ff5-fc42-4e1b-8f77-0792b6b6b38d.png"
         />
       }
       buttons={
-        // <NavigationButtons
-        //   links={[
-        //     { name: "Back" },
-        //     { route: "/retention-churn-matrix", name: "Strategies vs. Costs" },
-        //   ]}
-        // />
         <NavigationButtons
           links={[
             { name: "Back" },
-            { route: "/gather-tools", name: "Gather Tools" },
+            { route: "/retention-churn-matrix", name: "Strategies vs. Costs" },
           ]}
         />
+        // <NavigationButtons
+        //   links={[
+        //     { name: "Back" },
+        //     { route: "/gather-tools", name: "Gather Tools" },
+        //   ]}
+        // />
       }
     >
       <Content />

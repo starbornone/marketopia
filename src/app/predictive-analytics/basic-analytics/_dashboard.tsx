@@ -79,7 +79,7 @@ function Dashboard({ isVerbose }: { isVerbose: boolean }) {
           </p>
         )}
 
-        <form className={styles["form"]}>
+        <form className="flex-content">
           <fieldset>
             <label htmlFor="frequency">Frequency of Usage</label>
             <input
@@ -118,7 +118,7 @@ function Dashboard({ isVerbose }: { isVerbose: boolean }) {
           </fieldset>
         </form>
 
-        <div className={styles["model-selection"]}>
+        <div className="flex-content">
           <button
             onClick={() => setSelectedModel("Logistic Regression")}
             type="button"

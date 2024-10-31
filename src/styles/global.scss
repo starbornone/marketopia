@@ -146,3 +146,11 @@ button {
     color: var(--color-gold-500);
   }
 }
+
+.flex-content {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: var(--spacing-small) 0;
+}

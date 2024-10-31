@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "./_simulation.module.scss";
 import { Chart } from "@/components/chart/chart";
 import { Container } from "@/components/container/container";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
@@ -63,7 +62,7 @@ function Simulation({ isVerbose }: { isVerbose: boolean }) {
             premium pricing affects our standing in the market.
           </p>
         )}
-        <form className={styles["form"]}>
+        <form className="flex-content">
           <label htmlFor="campaign-price">Us: </label>
           <input
             id="campaign-price"
@@ -80,12 +79,12 @@ function Simulation({ isVerbose }: { isVerbose: boolean }) {
             value={competitorPrice}
           />
         </form>
-        <div className={styles["form"]}>
+        <div className="flex-content">
           {presets.map((preset, index) => (
             <button
               key={index}
-              type="button"
               onClick={() => applyPreset(index)}
+              type="button"
             >
               {preset.label}
             </button>
