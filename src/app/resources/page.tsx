@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
 import { defaultTitle } from "@/config/metadata";
+import { ImageArea } from "@/components/image-area/image-area";
 
 export const metadata: Metadata = {
   title: `Resources | ${defaultTitle}`,
@@ -10,7 +11,26 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <Container buttons={<NavigationButtons links={[{ name: "Back" }]} />}>
+    <Container
+      image={
+        <ImageArea
+          alt="Resources"
+          src="/images/042be389-e61c-47ab-aed3-e6cc0cb3c68b.png"
+        />
+      }
+      buttons={
+        <NavigationButtons
+          hideVerbose={true}
+          links={[
+            { name: "Back" },
+            {
+              route: "/",
+              name: "Home",
+            },
+          ]}
+        />
+      }
+    >
       <TextArea>
         <h1>Resources</h1>
         <ul>

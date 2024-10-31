@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Simulation } from "./_simulation";
+import Simulation from "./_simulation";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {

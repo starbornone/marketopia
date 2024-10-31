@@ -114,6 +114,10 @@ select {
   padding: var(--spacing-small);
   width: 100%;
 
+  &:disabled {
+    background-color: var(--color-gray-100);
+  }
+
   &:focus {
     border-color: var(--color-red-500);
     box-shadow: 0 0 5px var(--color-red-500);

@@ -1,8 +1,8 @@
+import Content from "./content";
 import { Container } from "@/components/container/container";
 import { ImageArea } from "@/components/image-area/image-area";
 import { Metadata } from "next";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
-import { TextArea } from "@/components/text-area/text-area";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
@@ -30,15 +30,7 @@ export default function Page() {
         />
       }
     >
-      <TextArea>
-        <h2>The Magic of Gamification</h2>
-        <p>
-          The secret to engaging your allies lies in the ancient art of
-          gamification. By using fun, rewards, and interactive elements, you can
-          inspire them to fight harder and stay loyal throughout the campaign.
-          This magic will be your key to success.
-        </p>
-      </TextArea>
+      <Content />
     </Container>
   );
 }

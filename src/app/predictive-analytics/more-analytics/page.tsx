@@ -1,4 +1,4 @@
-import { Dashboard } from "./_dashboard";
+import Dashboard from "./_dashboard";
 import { Metadata } from "next";
 import { defaultTitle } from "@/config/metadata";
 

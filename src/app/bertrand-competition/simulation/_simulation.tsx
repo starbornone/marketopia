@@ -6,8 +6,9 @@ import { Chart } from "@/components/chart/chart";
 import { Container } from "@/components/container/container";
 import { NavigationButtons } from "@/components/navigation-buttons/navigation-buttons";
 import { TextArea } from "@/components/text-area/text-area";
+import { withVerbose } from "@/hoc/withVerbose";
 
-export const Simulation = () => {
+function Simulation({ isVerbose }: { isVerbose: boolean }) {
   const [competitorPrice, setCompetitorPrice] = useState(99);
   const [campaignPrice, setCampaignPrice] = useState(75);
   const [marketShare, setMarketShare] = useState(0);
@@ -53,28 +54,30 @@ export const Simulation = () => {
     >
       <TextArea>
         <h2>Market Share Simulation</h2>
-        <p>
-          Market share is a key factor in competitive markets. The formula here
-          allows us to estimate how a pricing strategy influences the share of
-          customers Celeste Mailer could capture in comparison to competitors.
-          By adjusting prices, you can see how aggressive or premium pricing
-          affects your standing in the market.
-        </p>
+        {isVerbose && (
+          <p>
+            Market share is a key factor in competitive markets. The formula
+            here allows us to estimate how a pricing strategy influences the
+            share of customers Celeste Mailer could capture in comparison to
+            competitors. By adjusting prices, we can see how aggressive or
+            premium pricing affects our standing in the market.
+          </p>
+        )}
         <form className={styles["form"]}>
-          <label htmlFor="competitor-price">Competitor: </label>
-          <input
-            type="number"
-            id="competitor-price"
-            value={competitorPrice}
-            onChange={(e) => setCompetitorPrice(Number(e.target.value))}
-            disabled
-          />
           <label htmlFor="campaign-price">Us: </label>
           <input
-            type="number"
             id="campaign-price"
-            value={campaignPrice}
             onChange={(e) => setCampaignPrice(Number(e.target.value))}
+            type="number"
+            value={campaignPrice}
+          />
+          <label htmlFor="competitor-price">Competitor: </label>
+          <input
+            disabled
+            id="competitor-price"
+            onChange={(e) => setCompetitorPrice(Number(e.target.value))}
+            type="number"
+            value={competitorPrice}
           />
         </form>
         <div className={styles["form"]}>
@@ -95,4 +98,6 @@ export const Simulation = () => {
       </TextArea>
     </Container>
   );
-};
+}
+
+export default withVerbose(Simulation);

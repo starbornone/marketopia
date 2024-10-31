@@ -20,6 +20,7 @@ export default function Page() {
       }
       buttons={
         <NavigationButtons
+          hideVerbose={true}
           links={[
             { name: "Back" },
             {

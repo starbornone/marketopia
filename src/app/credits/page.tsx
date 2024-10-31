@@ -10,7 +10,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <Container buttons={<NavigationButtons links={[{ name: "Back" }]} />}>
+    <Container
+      buttons={
+        <NavigationButtons hideVerbose={true} links={[{ name: "Back" }]} />
+      }
+    >
       <TextArea align="center">
         <h1>Credits</h1>
         <p>

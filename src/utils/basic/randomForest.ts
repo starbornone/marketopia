@@ -8,7 +8,7 @@ export const randomForestModel = (
    * In random forest models, we typically start with a baseline churn probability.
    * This represents an average churn rate across the customer base before accounting for specific factors.
    * In this case, we assume a baseline churn probability of 50% for a typical customer.
-   * This number can be adjusted based on the average churn rate in your specific business model.
+   * This number can be adjusted based on the average churn rate in our specific business model.
    */
   const baselineChurn = 50;
 

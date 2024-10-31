@@ -9,8 +9,9 @@ import { TextArea } from "@/components/text-area/text-area";
 import { logisticRegression } from "@/utils/more/logisticRegression";
 import { randomForestModel } from "@/utils/more/randomForest";
 import { xgboostModel } from "@/utils/more/xgboost";
+import { withVerbose } from "@/hoc/withVerbose";
 
-export const Dashboard = () => {
+function Dashboard({ isVerbose }: { isVerbose: boolean }) {
   const [engagementRate, setEngagementRate] = useState(50); // Percentage
   const [accountTenure, setAccountTenure] = useState(12); // In months
   const [campaignSuccess, setCampaignSuccess] = useState(2); // On a scale of 1-5 for CTR success
@@ -72,11 +73,13 @@ export const Dashboard = () => {
     >
       <TextArea>
         <h2>More Analytics</h2>
-        <p>
-          In this simulation, adjust variables and choose from three different
-          churn prediction models to see how they calculate the likelihood of a
-          customer churning.
-        </p>
+        {isVerbose && (
+          <p>
+            In this simulation, adjust variables and choose from three different
+            churn prediction models to see how they calculate the likelihood of
+            a customer churning.
+          </p>
+        )}
 
         <form className={styles["form"]}>
           <fieldset>
@@ -152,24 +155,31 @@ export const Dashboard = () => {
 
         {selectedModel === "Logistic Regression" && (
           <p>
-            Logistic Regression uses a weighted sum of the variables and applies
-            a sigmoid function to output a probability between 0 and 100.
+            <strong>Logistic Regression</strong> uses a weighted sum of the
+            variables and applies a sigmoid function to output a probability
+            between 0 and 100. It assumes linear relationships between variables
+            and churn risk.
           </p>
         )}
         {selectedModel === "Random Forest" && (
           <p>
-            Random Forest aggregates decision trees to make a churn prediction,
-            considering factors like engagement, tenure, and campaign
-            performance.
+            <strong>Random Forest</strong> aggregates multiple decision trees to
+            make a churn prediction. It considers how different factors like
+            satisfaction, frequency, and time since the last interaction impact
+            churn.
           </p>
         )}
         {selectedModel === "XGBoost" && (
           <p>
-            XGBoost is a high-performance model that builds decision trees
-            sequentially, optimizing for churn prediction in complex datasets.
+            <strong>XGBoost</strong> is a powerful model that builds multiple
+            decision trees sequentially, with each tree correcting the errors of
+            the previous ones. It&apos;s known for its high performance with
+            larger datasets.
           </p>
         )}
       </TextArea>
     </Container>
   );
-};
+}
+
+export default withVerbose(Dashboard);

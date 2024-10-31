@@ -2,6 +2,7 @@ import "@/styles/global.scss";
 import type { Metadata } from "next";
 import { Layout } from "@/layout/layout";
 import { Lexend } from "next/font/google";
+import { VerboseProvider } from "@/context/VerboseContext";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
@@ -24,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lexend.variable}>
-        <Layout>{children}</Layout>
+        <VerboseProvider>
+          <Layout>{children}</Layout>
+        </VerboseProvider>
       </body>
     </html>
   );
