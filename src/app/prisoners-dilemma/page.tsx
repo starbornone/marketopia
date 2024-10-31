@@ -34,31 +34,9 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          alt="Game Theory 101 Teacher"
+          alt="Prisoner's Dilemma"
           src="/images/e25ca41e-e2f1-4ba8-aa7b-092751348a98.png"
         />
-      }
-      text={
-        <TextArea>
-          <h2>Prisoner&apos;s Dilemma</h2>
-          <p>
-            The Prisoner&apos;s Dilemma is a classic example in game theory that
-            shows how two rational individuals might not cooperate, even if it
-            seems that working together would be in their best interest. Each
-            player faces a choice to cooperate or betray the other, but the fear
-            of being betrayed leads both to choose self-interest, resulting in a
-            worse outcome for both.
-          </p>
-          <PayoffMatrix matrix={matrixData} />
-          <p>
-            This model is useful in analyzing competitive behaviors in
-            economics, politics, and business where individuals or groups might
-            prioritize their short-term gain over collective benefit, often
-            leading to suboptimal outcomes. It highlights the tension between
-            individual incentives and the overall good, making it an essential
-            tool for understanding strategic decision-making.
-          </p>
-        </TextArea>
       }
       buttons={
         <NavigationButtons
@@ -68,6 +46,27 @@ export default function Page() {
           ]}
         />
       }
-    />
+    >
+      <TextArea>
+        <h2>Prisoner&apos;s Dilemma</h2>
+        <p>
+          The Prisoner&apos;s Dilemma is a classic example in game theory that
+          shows how two rational individuals might not cooperate, even if it
+          seems that working together would be in their best interest. Each
+          player faces a choice to cooperate or betray the other, but the fear
+          of being betrayed leads both to choose self-interest, resulting in a
+          worse outcome for both.
+        </p>
+        <PayoffMatrix matrix={matrixData} />
+        <p>
+          This model is useful in analyzing competitive behaviors in economics,
+          politics, and business where individuals or groups might prioritize
+          their short-term gain over collective benefit, often leading to
+          suboptimal outcomes. It highlights the tension between individual
+          incentives and the overall good, making it an essential tool for
+          understanding strategic decision-making.
+        </p>
+      </TextArea>
+    </Container>
   );
 }

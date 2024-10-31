@@ -18,28 +18,6 @@ export default function Page() {
           src="/images/3e7188d4-02a2-4fa0-855e-79837efcc691.png"
         />
       }
-      text={
-        <TextArea>
-          <h2>What We Can Learn</h2>
-          <p>
-            Bertrand Competition calculations help us understand the balance
-            between pricing strategies and market capture. By setting prices
-            lower than the competition, you may gain market share. Conversely,
-            premium pricing might result in a smaller share but could lead to
-            higher margins depending on the market. It&apos;s crucial to balance
-            these aspects when making strategic decisions.
-          </p>
-          <h2>Potential Problems</h2>
-          <p>
-            While this model provides an estimate, it&apos;s based purely on
-            price and does not account for factors such as product quality,
-            brand loyalty, or marketing efforts. Also, the model can suggest
-            extreme outcomes (such as negative or overly high market share),
-            which might not be realistic. Additionally, the pricing of services
-            often involves complex negotiations and other variables.
-          </p>
-        </TextArea>
-      }
       buttons={
         <NavigationButtons
           links={[
@@ -51,6 +29,27 @@ export default function Page() {
           ]}
         />
       }
-    />
+    >
+      <TextArea>
+        <h2>What We Can Learn</h2>
+        <p>
+          Bertrand Competition calculations help us understand the balance
+          between pricing strategies and market capture. By setting prices lower
+          than the competition, you may gain market share. Conversely, premium
+          pricing might result in a smaller share but could lead to higher
+          margins depending on the market. It&apos;s crucial to balance these
+          aspects when making strategic decisions.
+        </p>
+        <h2>Potential Problems</h2>
+        <p>
+          While this model provides an estimate, it&apos;s based purely on price
+          and does not account for factors such as product quality, brand
+          loyalty, or marketing efforts. Also, the model can suggest extreme
+          outcomes (such as negative or overly high market share), which might
+          not be realistic. Additionally, the pricing of services often involves
+          complex negotiations and other variables.
+        </p>
+      </TextArea>
+    </Container>
   );
 }

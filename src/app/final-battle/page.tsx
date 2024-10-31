@@ -65,53 +65,6 @@ export default function Page() {
           alt="The Final Battle"
         />
       }
-      text={
-        <TextArea>
-          {!victory ? (
-            <>
-              <p>
-                The moment has come. You stand at the gates of the Churn
-                Dragon&apos;s lair, ready for the ultimate showdown. With your
-                allies by your side, and the magic of gamification and
-                predictive analytics empowering your every move, it&apos;s time
-                to defeat the Churn Dragon once and for all.
-              </p>
-              <div className={styles["health-bar-container"]}>
-                <strong>Churn Dragon&apos;s Health:</strong>
-                <div className={styles["health-bar"]}>
-                  <div
-                    className={styles["health-bar-fill"]}
-                    style={{ width: `${dragonHealth}%` }}
-                  />
-                </div>
-              </div>
-              <ul>
-                <li>
-                  <strong>Engagement Level:</strong> {engagement}/100
-                </li>
-                <li>
-                  <strong>Retention Likelihood:</strong> {retentionLikelihood}%
-                </li>
-              </ul>
-              <strong>Action Log:</strong>
-              <div className={styles["action-log"]}>
-                <ul>
-                  {actionLog.map((action, index) => (
-                    <li key={index}>{action}</li>
-                  ))}
-                </ul>
-              </div>
-              <button onClick={handleRunScenario}>Run Strategy</button>
-            </>
-          ) : (
-            <p>
-              The Churn Dragon roars in defeat, its grip on Marketopia
-              shattered. You and your allies stand victorious as the remnants of
-              the dragon fade into the shadows.
-            </p>
-          )}
-        </TextArea>
-      }
       buttons={
         <NavigationButtons
           links={[
@@ -124,6 +77,52 @@ export default function Page() {
           ]}
         />
       }
-    />
+    >
+      <TextArea>
+        {!victory ? (
+          <>
+            <p>
+              The moment has come. You stand at the gates of the Churn
+              Dragon&apos;s lair, ready for the ultimate showdown. With your
+              allies by your side, and the magic of gamification and predictive
+              analytics empowering your every move, it&apos;s time to defeat the
+              Churn Dragon once and for all.
+            </p>
+            <div className={styles["health-bar-container"]}>
+              <strong>Churn Dragon&apos;s Health:</strong>
+              <div className={styles["health-bar"]}>
+                <div
+                  className={styles["health-bar-fill"]}
+                  style={{ width: `${dragonHealth}%` }}
+                />
+              </div>
+            </div>
+            <ul>
+              <li>
+                <strong>Engagement Level:</strong> {engagement}/100
+              </li>
+              <li>
+                <strong>Retention Likelihood:</strong> {retentionLikelihood}%
+              </li>
+            </ul>
+            <strong>Action Log:</strong>
+            <div className={styles["action-log"]}>
+              <ul>
+                {actionLog.map((action, index) => (
+                  <li key={index}>{action}</li>
+                ))}
+              </ul>
+            </div>
+            <button onClick={handleRunScenario}>Run Strategy</button>
+          </>
+        ) : (
+          <p>
+            The Churn Dragon roars in defeat, its grip on Marketopia shattered.
+            You and your allies stand victorious as the remnants of the dragon
+            fade into the shadows.
+          </p>
+        )}
+      </TextArea>
+    </Container>
   );
 }

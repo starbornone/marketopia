@@ -6,7 +6,7 @@ import { TextArea } from "@/components/text-area/text-area";
 import { defaultTitle } from "@/config/metadata";
 
 export const metadata: Metadata = {
-  title: `Gamification: Referral & Rewards | ${defaultTitle}`,
+  title: `Referral and Rewards | ${defaultTitle}`,
 };
 
 export default function Page() {
@@ -14,32 +14,32 @@ export default function Page() {
     <Container
       image={
         <ImageArea
-          src="/images/80fbd5cc-d902-44aa-aafa-3e28a9ab2fac.png"
-          alt="Referral & Rewards"
+          alt="Referral and Rewards"
+          src="/images/6f32d47e-30e2-4aa6-83b7-45e2e3748f26.png"
         />
-      }
-      text={
-        <TextArea>
-          <p>
-            Referral programs with tiered rewards encourage your allies to
-            recruit others to your cause. As they bring in more recruits, they
-            earn exclusive rewards like discounts, free credits, or VIP access
-            to new features. This creates a sense of community and competition,
-            driving not only customer retention but also customer acquisition.
-          </p>
-        </TextArea>
       }
       buttons={
         <NavigationButtons
           links={[
             { name: "Back" },
             {
-              route: "/gamification-magic/quests-seasonal-events",
+              route: "/quests-seasonal-events",
               name: "Quests & Seasonal Events",
             },
           ]}
         />
       }
-    />
+    >
+      <TextArea>
+        <h2>Referral and Rewards</h2>
+        <p>
+          Referral programs with tiered rewards encourage your allies to recruit
+          others to your cause. As they bring in more recruits, they earn
+          exclusive rewards like discounts, free credits, or VIP access to new
+          features. This creates a sense of community and competition, driving
+          not only customer retention but also customer acquisition.
+        </p>
+      </TextArea>
+    </Container>
   );
 }
