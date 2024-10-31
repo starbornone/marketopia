@@ -73,12 +73,49 @@ function Dashboard({ isVerbose }: { isVerbose: boolean }) {
     >
       <TextArea>
         <h2>More Analytics</h2>
-        {isVerbose && (
-          <p>
-            In this simulation, adjust variables and choose from three different
-            churn prediction models to see how they calculate the likelihood of
-            a customer churning.
-          </p>
+        {isVerbose ? (
+          <>
+            <p>
+              In this simulation, we can adjust key variables that influence
+              customer churn and choose from three different churn prediction
+              models to see how they calculate the likelihood of a customer
+              churning.
+            </p>
+            <p>
+              <strong>Engagement Rate:</strong> This represents how actively a
+              customer interacts with our platform, measured as a percentage.
+              Higher engagement often correlates with lower churn risk because
+              engaged customers find value in the product.
+            </p>
+            <p>
+              <strong>Account Tenure:</strong> The length of time, in months,
+              that a customer has been with us. Longer-tenured customers might
+              be more loyal, but they could also be at risk of churn if
+              they&apos;ve become disengaged.
+            </p>
+            <p>
+              <strong>Campaign Success:</strong> Measured on a scale from 1 to
+              5, this indicates the effectiveness of the customer&apos;s email
+              campaigns, such as open rates and click-through rates. Higher
+              success can lead to increased satisfaction and reduced churn
+              likelihood.
+            </p>
+            <p>
+              <strong>Billing Frequency:</strong> Indicates whether the customer
+              is billed monthly or yearly. Yearly billing often suggests a
+              stronger commitment and can be associated with a lower churn
+              probability compared to monthly billing.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              In this simulation, we&apos;re using{" "}
+              <strong>engagement rate</strong>, <strong>account tenure</strong>,{" "}
+              <strong>campaign success</strong>, and{" "}
+              <strong>billing frequency</strong>.
+            </p>
+          </>
         )}
 
         <form className="flex-content">
@@ -152,31 +189,6 @@ function Dashboard({ isVerbose }: { isVerbose: boolean }) {
         <p className="emphasis">
           Predicted Churn Probability: {churnProbability.toFixed(2)}%
         </p>
-
-        {selectedModel === "Logistic Regression" && (
-          <p>
-            <strong>Logistic Regression</strong> uses a weighted sum of the
-            variables and applies a sigmoid function to output a probability
-            between 0 and 100. It assumes linear relationships between variables
-            and churn risk.
-          </p>
-        )}
-        {selectedModel === "Random Forest" && (
-          <p>
-            <strong>Random Forest</strong> aggregates multiple decision trees to
-            make a churn prediction. It considers how different factors like
-            satisfaction, frequency, and time since the last interaction impact
-            churn.
-          </p>
-        )}
-        {selectedModel === "XGBoost" && (
-          <p>
-            <strong>XGBoost</strong> is a powerful model that builds multiple
-            decision trees sequentially, with each tree correcting the errors of
-            the previous ones. It&apos;s known for its high performance with
-            larger datasets.
-          </p>
-        )}
       </TextArea>
     </Container>
   );
